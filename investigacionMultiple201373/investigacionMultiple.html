@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Investigación múltiple - 201373 </title>
+  </head>
+
+  <body>
+    <section style="background-color: lightblue; padding:20px">
+        <h1 style="text-align: center">Investigación múltiple</h1>
+        <h2>Diferencia de las etiquetas y sus implicaciones visuales.</h2>
+        <h3>En esta tarea, se encuentra una investigación sobre la diferencia de las etiquetas y sus implicaciones visuales. Además, se hablará sobre qué son los elementos de línea y los elementos de bloque. </h3>
+        <h4>Mariela Mejía Gutiérrez</h4>
+        <h5>23 de agosto de 2025</h5>
+    </section>
+
+    <section  style="padding:20px">
+        <h4>Investigar las diferencias entre las etiquetas, qué implicaciones tienen de forma visual, qué implicaciones tienen respecto a los motores de búsqueda como Google:</h4>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; text-align:left; width:100%;">
+        <thead style="background:#f0f0f0;">
+            <tr>
+            <th>Etiqueta</th>
+            <th>Visual</th>
+            <th>Semántica / Significado</th>
+            <th>Motores de búsqueda</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td><code>&lt;b&gt;</code> vs <code>&lt;strong&gt;</code></td>
+            <td>Ambas etiquetas muestran texto en negritas</td>
+            <td>
+                <code>&lt;b&gt;</code>: Solo sirve para brindar un estilo visual. No añade importancia al texto.<br>
+                <code>&lt;strong&gt;</code>: Indica importancia o énfasis fuerte en el texto.
+            </td>
+            <td>
+                Google puede tomar la etiqueta <code>&lt;strong&gt;</code> como relevante dentro del contenido (el texto).<br>
+                Por otro lado, la etiqueta <code>&lt;b&gt;</code> no comunica nada extra más allá del estilo.
+            </td>
+            </tr>
+
+
+            <tr>
+            <td><code>&lt;i&gt;</code> vs <code>&lt;em&gt;</code></td>
+            <td>Ambos muestran <i>texto en cursiva</i></td>
+            <td>
+                <code>&lt;i&gt;</code>: se usa para voz alternativa o términos especiales.<br>
+                <code>&lt;em&gt;</code>: enfatiza una palabra o frase dentro del texto.
+            </td>
+            <td>
+                <code>&lt;em&gt;</code> indica énfasis semántico; los lectores de pantalla pueden cambiar la entonación.<br>
+                <code>&lt;i&gt;</code> solo cambia el estilo visual.
+            </td>
+            </tr>
+
+
+            <tr>
+            <td><code>&lt;s&gt;</code> vs <code>&lt;del&gt;</code></td>
+            <td>Ambos muestran <s>texto tachado</s></td>
+            <td>
+                <code>&lt;s&gt;</code>: marca texto que ya no es vigente o válido (ejemplo: precio anterior).<br>
+                <code>&lt;del&gt;</code>: indica texto eliminado del documento, puede llevar atributos como <code>datetime</code>.
+            </td>
+            <td>
+                <code>&lt;del&gt;</code> comunica un cambio real en el documento y puede ser interpretado por sistemas de control de versiones y accesibilidad.<br>
+                <code>&lt;s&gt;</code> solo es presentacional.
+            </td>
+            </tr>
+
+
+        </tbody>
+        </table>
+    </section>
+
+    <section style="background-color: #abdbe3; padding:20px">
+        <h3>Como parte del HTML existen distintos tipos de categorías que se le pueden dar a los elementos o etiquetas. Estos se conocen como elementos de línea y de bloque.</h3>
+        <h4>Investigar qué son los elementos de línea y elementos de bloque. Poner por lo menos 5 ejemplos de cada uno.</h4>
+        <h5>Elementos de línea</h5>
+        <h5>Elementos de bloque</h5>
+    </section>
+    <form action="https://estadistica.itam.mx/es/node/24399/" target="_blank">
+      <fieldset>
+        <legend>Busca tu materia de elección del departamento de <strong>estadística</strong></legend>
+        <input
+            type="text"
+            id="search"
+            name="#"
+            placeholder="¿Qué estás buscando?"
+            required
+        />
+        <button type="search-btn">Buscar</button>
+        </fieldset>
+    </form>
+    <br> <br>
+    <form action="https://dac.itam.mx/es/node/24376/" target="_blank">
+      <fieldset>
+        <legend>Busca tu materia de elección del departamento de <strong>computación</strong></legend>
+        <input
+            type="text"
+            id="search"
+            name="#"
+            placeholder="¿Qué estás buscando?"
+            required
+        />
+        <button type="search-btn">Buscar</button>
+        </fieldset>
+    </form>
+  </body>
+</html>
