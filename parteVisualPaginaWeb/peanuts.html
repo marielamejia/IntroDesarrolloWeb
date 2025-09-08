@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <title>Peanuts-201373</title>
+        <style>
+            body { /* utilizamos estos para eliminar el espacio en blanco entre una sección y otra */
+                margin: 0;
+            }
+            h1, h2 {
+                margin: 0;
+            }
+            @font-face { /*usamos estos metodos para poner Peanuts mas grande y con otro tipo de letra */
+                font-family: 'PeanutsFont';
+                src: url('peanuts.ttf') format('truetype');
+            }
+            .peanuts-title {
+                font-family: 'PeanutsFont', sans-serif;
+                font-size: 60px;
+                color: white;
+                margin: 0;
+            }
+            .menu a { color:#fff; text-decoration:none; margin:0 10px; }
+        </style>
+
+        <!--usamos este link para poder agregar los iconos de las redes sociales-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+
+        <!--aqui empieza la seccion amarilla con las redes sociales-->
+        <section style="background-color: #997f00; display:flex; align-items:center; justify-content:center; gap:20px; padding:15px;">
+            <h2 style="color:white; margin:0;">Follow us on</h2>
+            <!-- iconos de redes sociales -->
+            <a href="https://facebook.com" target="_blank" style="color:white; font-size:28px;">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" style="color:white; font-size:28px;">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" style="color:white; font-size:28px;">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank" style="color:white; font-size:28px;">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </section>
+
+
+        <!--aqui empieza la seccion negra con las opciones y el titulo-->
+        <section style="background-color: black; display: flex; justify-content: center; align-items: center; gap: 40px; height: 80px;">
+            <br>
+            <h2 style="color:white; margin: 0;">ABOUT</h2>
+            <h2 style="color:white; margin: 0;">TAKE CARE</h2>
+            <h2 style="color:white; margin: 0;">WATCH</h2>
+
+            <!--aqui es donde usamos la clase declarada arriba para el tipo de letra-->
+            <h1 class="peanuts-title" style="color:#e4e4d6">PEANUTS</h1>
+            
+            <h2 style="color:white; margin: 0;">ACTIVITIES</h2>
+            <h2 style="color:white; margin: 0;">SHOP</h2>
+            <h2 style="color:white; margin: 0;">MORE</h2>
+            <br>
+        </section>
+
+
+        <!--aqui empieza la seccion azul con las imagenes-->
+        <section style="background-color: #1261a2; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:40px; padding:40px 0;">
+            <div style="text-align: center; padding: 50px;">
+                <img src="armstrongProject.png" alt="Armstrong Project" style="max-width: 90%; height: auto;">
+            </div>
+
+            <div style="text-align: center; width: 50%;">
+                <img src="snoopy.png" alt="Snoopy foto" style="max-width: 60%; height: auto;">
+            </div>
+        </section>
+
+
+        <!--aqui empieza la última seccion negra (el footer)-->
+        <footer class="menu" style="background-color: black; display: flex; justify-content: center; align-items: center; gap: 40px; height: 80px;">
+            <a href="https://www.peanuts.com/about-peanuts"> <strong>About Peanuts</strong></a>
+            <a href="https://www.peanuts.com/take-care"> <strong>Take Care</strong></a>
+            <a href="https://www.peanuts.com/activities"> <strong>Activities</strong></a>
+            <a href="https://www.peanuts.com/activities"> <strong>Apps</strong></a>
+            <a href="https://www.peanuts.com/faqs"> <strong>FAQs</strong></a>
+            <a href="https://www.peanuts.com/terms-of-use"> <strong>Terms of Use</strong></a>
+            <a href="https://www.peanuts.com/privacy-cookies-policy"> <strong>Privacy and Cookie Policy</strong></a>
+        </footer>
+    </body>
+</html> 

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taylor Swift — 201373</title>
+
+  <!--Agregamos el apartado Style para brindar una visión única de nuestra página web -->
+  <style>
+    /* CSS (usar clases; solo p, body, h1, h2, h3 por etiqueta) */
+    body { 
+      font-family: system-ui, Arial, sans-serif; 
+      margin: 0; 
+      line-height: 1.6; color:#222; 
+      background:#faf7f2; 
+    }
+    h1, h2, h3 { 
+      margin: 0 0 .5rem 0; 
+    }
+    p { 
+      margin: .5rem 0 1rem; 
+    }
+
+    /* selector por id */
+    #hero {
+      background: linear-gradient(120deg,#d426c5,#2596be,#8EC5FC);
+      color: #1b1b1b;
+      padding: 3rem 1rem;
+      text-align: center;
+      text-shadow: 0 1px 0 rgba(255,255,255,.6);
+      border-bottom: 4px solid #1b1b1b22;
+      box-shadow: 0 6px 14px rgba(0,0,0,.15);
+    }
+
+    /* Clases (estilo principal) */
+    .container { 
+      max-width: 1100px; 
+      margin: 0 auto; 
+      padding: 1rem; 
+    }
+    .lead { 
+      font-size:1.1rem; 
+    }
+    .grid { 
+      display:grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap:1rem; 
+    }
+    .card { 
+      background:#fff; 
+      border:2px solid #111; 
+      border-radius:14px; 
+      padding:1rem; 
+      box-shadow: 0 10px 18px rgba(0,0,0,.08); 
+    }
+    .muted { 
+      color:#666; 
+    }
+    .pill { 
+      display:inline-block; 
+      padding:.1rem .5rem; 
+      border-radius:999px; 
+      background:#111; 
+      color:#fff; 
+      font-size:.8rem; 
+    }
+    .dotted { 
+      border:2px dotted #6b6b6b; 
+      padding:.75rem; 
+      border-radius:12px; /* agregamos un borde punteado */
+    } 
+    .center { 
+      text-align:center; 
+    }
+    .subrayado { /*metodo para subrayado de texto*/
+      text-decoration: underline; 
+    }
+
+    /*Estilos utilizados para hacer la nav bar*/
+    .nav { 
+      background:#1b1b1b; 
+    }
+    .nav__inner { 
+      display:flex; 
+      gap:1rem; 
+      align-items:center; 
+      justify-content:space-between; 
+    }
+    .nav__brand { 
+      font-weight:800; 
+      letter-spacing:.5px; 
+      color:#fff; 
+      text-decoration:none; 
+    }
+    .nav__menu { 
+      list-style:none; 
+      display:flex; 
+      gap:1rem; 
+      padding:0; 
+      margin:0; 
+    }
+    .nav__menu a { 
+      color:#fff; 
+      text-decoration:none; 
+      padding:.5rem .75rem; 
+      border:1px dotted #ffffff88; 
+      border-radius:8px; 
+    }
+    .nav__menu a:hover { 
+      background:#ffffff22; color:#fffa; 
+    }
+    
+
+    .media { 
+      display:flex; 
+      gap:1rem; 
+      align-items:center; 
+    }
+    .media img { 
+      width:100%; 
+      border-radius:12px; 
+      border:3px solid #111; 
+    }
+    .media--portrait { 
+      max-width:360px; 
+    }
+
+
+    /* Estilos para botones y enlaces */
+    .btn { 
+      display:inline-block; 
+      background:#111; 
+      color:#fff; 
+      border:none; 
+      padding:.65rem 1rem;
+      border-radius:12px; 
+      cursor:pointer; 
+      box-shadow: 0 6px 12px rgba(0,0,0,.2); 
+    }
+    .btn:hover { 
+      background:#333; 
+    }
+
+
+    /* Estilos para el footer */
+    .footer { 
+      background:#2b2b2b; 
+      color:#fff; 
+      padding:1.5rem 1rem;
+    }
+    .footer__icons { 
+      display:flex; 
+      gap:.75rem; 
+      align-items:center; 
+      justify-content:center; 
+    }
+    .footer__icons a { 
+      color:#fff; 
+      text-decoration:none; 
+      font-weight:700; 
+      border:1px dotted #fff; 
+      padding:.25rem .5rem; 
+      border-radius:8px; 
+    }
+    .footer__icons a:hover { 
+      background:#920894; 
+    }
+
+
+    /* Estilo para los hr */
+    hr { 
+      border:none; 
+      border-top:2px solid #111; 
+      margin:1.25rem 0; 
+    }
+
+
+    /* Imagen que desaparece si es menor a 400px */
+    .hide-on-small { 
+      display:block; 
+    } 
+    @media (max-width: 400px){
+      .hide-on-small { 
+        display: none !important;
+      }
+    }
+
+
+    /*Estilo para la galería de fotos (collage)*/
+    .gallery-grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr)); /*usamos 3 columnas */
+      gap: 24px;
+      margin-top: .75rem;
+    }
+
+    /* Diseño de cada tarjeta de la galeria */
+    .gallery-cell{
+      aspect-ratio: 1 / 1;  /* hace que cada celda sea cuadrada */
+      border-radius: 16px;
+      border: 2px solid #111;
+      box-shadow: 0 10px 18px rgba(0,0,0,.12);
+      overflow: hidden;
+      background: #fff;
+      display: grid;
+      place-items: center;
+    }
+
+    /* Método para que la imagen llene la tarjeta */
+    .gallery-cell img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        transition: transform .25s ease;
+    }
+    .gallery-cell:hover img{ /*efecto al pasar el mouse sobre alguna foto de la galería*/
+        transform: scale(1.02); 
+    }
+
+    /*Métodos para que imágenes de spotify y apple music se adapten al tamaño de la pantalla*/
+    .stream-banners { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+    }
+    .stream-banner { 
+      display: block; 
+    }                  
+    .stream-banner img{
+      width: 100%;   
+      height: auto;   /* mantiene la proporción */
+      display: block;                                   
+      border-radius: 12px;
+      border: 3px solid #111;
+      box-shadow: 0 8px 16px rgba(0,0,0,.15);
+      transition: transform .2s ease;
+    }
+
+    /*MÉTODOS USADOS PARA QUE LA PÁGINA SEA RESPONSIVE*/
+    /* Cambiamos el fondo si es menor a 700px */
+    @media (max-width: 700px) {
+      main { background:#ea9f72; } 
+      .grid { grid-template-columns: 1fr; }
+      .media { flex-direction:column; }
+    }
+    /* Cambiamos el fondo si es menor a 300px */
+    @media (max-width: 300px) {
+      main { background:#72a9ea; }
+      .grid { grid-template-columns: 1fr; }
+      .media { flex-direction:column; }
+    }
+
+    /*Queremos que los hr desaparezcan al hacer la pantalla pequeña*/
+    @media (max-width: 700px){
+        hr { 
+            display: none;  
+        }
+    }
+
+    /*Hacemos que la galeria se vuelva de 2 columnas y luego de 1 segun los px de la página */
+    @media (max-width: 900px){
+      .gallery-grid{ 
+        grid-template-columns: repeat(2, minmax(0,1fr)); 
+      }
+    }
+    @media (max-width: 560px){
+      .gallery-grid{ 
+        grid-template-columns: 1fr; 
+      }
+    }
+</style>
+</head>
+
+<body>
+  <!-- uso de header y nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#">Taylor Swift</a>
+      <nav>
+        <ul class="nav__menu">
+          <!-- enlaces internos (usando ids) -->
+          <li><a href="#biografia">Biografía</a></li>
+          <li><a href="#discografia">Discografía</a></li>
+          <li><a href="https://es.wikipedia.org/wiki/Anexo:Premios_y_nominaciones_de_Taylor_Swift" target="_blank" rel="noopener">Logros</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <!-- enlaces externos (se abre en una nueva pestaña) -->
+          <li><a href="https://www.taylorswift.com/" target="_blank" rel="noopener">Sitio Oficial</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- uso de hero (id estilado) y de etiqueta span -->
+  <section id="hero">
+    <div class="container">
+      <h1>Taylor Swift</h1>
+      <h2 class="lead">Cantautora, productora y directora. <span class="pill">13</span> álbumes y giras históricas.</h2>
+    </div>
+  </section>
+  
+  <!-- uso de main -->
+  <main class="container">
+    <!-- Biografía -->
+    <section id="biografia" class="card">
+      <h2>Biografía</h2>
+      <article>
+        <div class="media">
+          <img class="media--portrait" src="fotosPagina/taylorSwiftPrincipal.jpg" alt="Imagen de Taylor Swift y su evolución musical" />
+          <div>
+            <p>
+              Taylor Alison Swift (13 de diciembre de 1989) es una artista estadounidense reconocida por su evolución musical y narrativa lírica.
+              Inició en el country y transitó al pop y al folk alternativo, ganando múltiples premios internacionales.
+            </p>
+            <p>
+              Inició su carrera en la música country en Nashville a los 14 años, firmando con Big Machine Records y lanzando su álbum debut homónimo en 2006. 
+              Es conocida por su éxito en el pop, álbumes como Fearless y 1989, y por regrabar sus primeros trabajos tras dejar su antiguo sello discográfico. 
+              Además de su carrera musical, ha expandido su influencia como empresaria, y se ha destacado por su filantropía y su activismo por los 
+              derechos de los artistas (obtenido de Wikipedia). 
+            </p>
+            <p>
+              Conoce más sobre la  
+              <a class="subrayado" href="https://www.buenamusica.com/taylor-swift/biografia" target="_blank" rel="noopener">biografía</a> de Taylor Swift.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <hr>
+
+    <!-- Discografía -->
+    <section id="discografia" class="grid">
+      <article class="card">
+        <h2>Discografía destacada</h2>
+        <p>A continuación, se presentan los álbumes más escuchados:</p>
+        <!-- uso de lista ordenada (ol) y sus elementos (li)-->
+        <ol>
+          <li><strong>Lover (2019):</strong> 12 mil millones de reproducciones. </li>
+          <li><strong>Midnights (2022):</strong> Album más escuchado en 2023. Más de 11 mil millones de reproducciones. </li>
+          <li><strong>folklore (2020):</strong> 10 mil millones de reproducciones. </li>
+          <li><strong>Reputation (2017):</strong> 9 mil millones de reproducciones </li>
+          <li><strong>1989 (2014):</strong> 9 mil millones de reproducciones </li>
+        </ol>
+        <strong>Mención especial:</strong>
+        <div class="dotted">
+            <p>Su último album, <i>The Tortured Poets Department</i> (19 de abril de 2024), ha sido aclamado por su innovación y profundidad lírica.
+                A pesar del poco tiempo que tiene el disco, este ha batido numerosos récords como por ejemplo, 
+            </p>
+            <!--uso de lista desordenada (ul) y sus elementos (li)-->
+            <ul>
+                <li>Superó los 799 millones de reproducciones en Estados Unidos en los primeros 6 días</li>
+                <li>Album más reproducido en una semana en Spotify</li>
+                <li>Album más escuchado en un solo día con un total de 300 millones de reproducciones.</li>
+            </ul>
+            <!--uso de style para centrar la imagen dentro de la clase dotted-->
+            <img src="fotosPagina/ttpd.jpg" alt="Portadas del album The Tortured Poets Department" class="hide-on-small" style="display:block; margin:12px auto 0; max-width:300px; height:auto; border-radius:12px; border:3px solid #111;"/>
+        </div>
+      </article>
+
+      <!--Escucha a Taylor Swift sección-->
+      <article class="card center">
+        <h2>Escúchala</h2>
+        <!--uso de enlaces externos-->
+        <p>Escucha a Taylor Swift en tus plataformas favoritas</p>
+        <div class="stream-banners">
+          <!--escuchar a taylor en spotify-->
+          <a href="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02" class="stream-banner" target="_blank" rel="noopener">
+            <img src="fotosPagina/spotify.png" alt="Escuchar a Taylor Swift en Spotify">
+          </a>
+          <!--escuchar a taylor en apple music-->
+          <a href="https://music.apple.com/us/artist/taylor-swift/159260351" class="stream-banner" target="_blank" rel="noopener">
+            <img src="fotosPagina/appleMusic.jpeg" alt="Escuchar a Taylor Swift en Apple Music">
+          </a>
+        </div>
+    </article>
+
+    </section>
+
+    <hr/>
+
+    <hr/>
+
+    <!-- Galería de fotos (usamos más de 3 imágenes) -->
+   <section id="galeria" class="card">
+        <h2>Galería de fotos</h2>
+        <h3>A continuación, se presentan todas las portadas de los albumes de Taylor Swift en orden cronológico</h3>
+        <div class="gallery-grid">
+            <figure class="gallery-cell"><img src="fotosPagina/debutAlbum.png" alt="Portada debut"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/fearlessAlbum.jpg" alt="Portada Fearless"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/speakNowAlbum.jpg" alt="Portada Speak Now"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/redAlbum.jpg" alt="Portada Red"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/1989Album.jpg" alt="Portada 1989"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/reputationAlbum.jpg" alt="Portada Reputation"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/loverAlbum.jpg" alt="Portada Lover"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/folkloreAlbum.jpg" alt="Portada Folklore"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/evermoreAlbum.jpg" alt="Portada Evermore"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/midnightsAlbum.jpg" alt="Portada Midnights"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/ttpdAlbum.jpg" alt="Portada TTPD"></figure>
+            <figure class="gallery-cell"><img src="fotosPagina/lfoasAlbum.jpg" alt="Portada LFOAS"></figure>
+        </div>
+    </section>
+
+    <hr/>
+
+    <!-- FORMULARIO -->
+    <section id="contacto" class="card">
+      <h2>Contacto</h2>
+      <p>¿Fan de Taylor? Déjanos tus datos para más actualizaciones.</p>
+      <!--Uso de form-->
+      <form>
+        <div class="grid">
+          <div>
+            <!--Uso de labels y de inputs-->
+            <label for="nombre">Nombre</label><br/>
+            <input class="dotted" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div>
+            <label for="email">Email</label><br/>
+            <input class="dotted" type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required />
+          </div>
+        </div>
+        <div class="center" style="margin-top:1rem;">
+          <!--Uso de button-->
+          <button class="btn" type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container center">
+      <h3>¡Gracias por visitar este blog!</h3>
+      <p class="muted">Sigue las redes oficiales:</p>
+      <div class="footer__icons">
+        <a href="https://twitter.com/taylorswift13" target="_blank" rel="noopener">X</a>
+        <a href="https://www.instagram.com/taylorswift/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@TaylorSwift" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

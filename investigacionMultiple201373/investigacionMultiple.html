@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Investigación múltiple - 201373 </title>
+  </head>
+
+  <body>
+    <section style="background-color: lightblue; padding:20px">
+        <h1 style="text-align: center">Investigación múltiple</h1>
+        <h2>Diferencia de las etiquetas y sus implicaciones visuales.</h2>
+        <h3>En esta tarea, se encuentra una investigación sobre la diferencia de las etiquetas y sus implicaciones visuales. Además, se hablará sobre qué son los elementos de línea y los elementos de bloque. </h3>
+        <h4>Mariela Mejía Gutiérrez</h4>
+        <h5>25 de agosto de 2025</h5>
+    </section>
+
+    <section  style="padding:20px">
+        <h2>Investigar las diferencias entre las etiquetas, qué implicaciones tienen de forma visual, qué implicaciones tienen respecto a los motores de búsqueda como Google:</h2>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; text-align:left; width:100%;">
+        <thead style="background:#f0f0f0;">
+            <tr>
+            <th>Etiqueta</th>
+            <th>Visual</th>
+            <th>Semántica / Significado</th>
+            <th>Motores de búsqueda</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td><code>&lt;b&gt;</code> vs <code>&lt;strong&gt;</code></td>
+            <td>Ambas etiquetas muestran texto en negritas</td>
+            <td>
+                <code>&lt;strong&gt;</code>: Indica importancia o énfasis fuerte en el texto.<br>
+                <code>&lt;b&gt;</code>: Solo sirve para brindar un estilo visual. No añade importancia al texto.
+            </td>
+            <td>
+                <p>Google puede tomar la etiqueta <code>&lt;strong&gt;</code> como relevante dentro del contenido (el texto).</p>
+                <p>Por otro lado, la etiqueta <code>&lt;b&gt;</code> no comunica nada extra más allá del estilo.</p>
+            </td>
+            </tr>
+
+
+            <tr>
+            <td><code>&lt;i&gt;</code> vs <code>&lt;em&gt;</code></td>
+            <td>Ambas muestran texto en cursiva</td>
+            <td>
+                <code>&lt;em&gt;</code>: se usa para enfatizar una palabra o frase dentro del texto. <br>
+                <code>&lt;i&gt;</code>: se usa para voz alternativa o para términos especiales.
+            </td>
+            <td>
+                <p>En Google, la etiqueta <code>&lt;em&gt;</code> indica que el contenido enfatizado es importante para el texto.</p>
+                <p>En cambio, <code>&lt;i&gt;</code> solo cambia el estilo visual.</p>
+            </td>
+            </tr>
+
+
+            <tr>
+            <td><code>&lt;s&gt;</code> vs <code>&lt;del&gt;</code></td>
+            <td>Ambas muestran texto tachado</td>
+            <td>
+                <code>&lt;del&gt;</code>: indica texto eliminado del documento. <br>
+                <code>&lt;s&gt;</code>: marca texto que ya no es vigente o válido como en las páginas de supermercado cuando marcan un precio anterior
+            </td>
+            <td>
+                <p>En Google, la etiqueta <code>&lt;del&gt;</code> comunica un cambio real en el documento y puede ser interpretado por sistemas de control de versiones y accesibilidad.</p>
+                <p><code>&lt;s&gt;</code> solo es presentacional, es decir, solo cambia el estilo visual.</p>
+            </td>
+            </tr>
+        </tbody>
+        </table>
+        <p>Para realizar la investigación anterior, se utilizaron las siguientes páginas</p>
+        <ol>
+            <li><a href="https://www-freecodecamp-org.translate.goog/news/difference-between-b-and-strong-in-html/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc" target="_blank">La diferencia entre <code>&lt;b&gt;</code> y <code>&lt;Strong&gt;</code> en HTML: explicación con ejemplos</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/em#:~:text=The%20element%20represents%20stress,of%20representing%20its%20semantic%20meaning." target="_blank"><code>&lt;em&gt;</code>: The Emphasis element</a></li>
+            <li><a href="https://developer-mozilla-org.translate.goog/en-US/docs/Web/HTML/Reference/Elements/s?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc" target="_blank"><code>&lt;s&gt;</code>: El elemento Tachado</a></li>
+        </ol>
+    </section>
+
+    <section style="background-color: #abdbe3; padding:20px">
+        <h2>Como parte del HTML existen distintos tipos de categorías que se le pueden dar a los elementos o etiquetas. Estos se conocen como elementos de línea y de bloque.</h2>
+        <h3>Investigar qué son los elementos de línea y elementos de bloque. Poner por lo menos 5 ejemplos de cada uno.</h3>
+        <h4>Elementos de línea</h4>
+        <p>Los elementos de línea se usan generalmente para dar formato o significado dentro de un texto. Esto se debe a que utilizan solo el espacio necesario para su contenido, sin la necesidad de forzar un salto de línea. 
+            Algunos ejemplos de elementos de línea son: </p>
+        <ul>
+            <li><code>&lt;a&gt;</code></li>
+            <li><code>&lt;b&gt;</code></li>
+            <li><code>&lt;em&gt;</code></li>
+            <li><code>&lt;img&gt;</code></li>
+            <li><code>&lt;label&gt;</code></li>
+        </ul>
+        <h4>Elementos de bloque</h4>
+        <p>Los elementos de bloque son aquello que, aunque su contenido no lo requiera, utilizan todo el ancho de la página.
+            Dentro de un elemento de bloque se pueden anidar tanto elementos de bloque como elementos en línea. Algunos ejemplos de elementos de bloque son: </p>
+            <ul>
+                <li><code>&lt;div&gt;</code></li>
+                <li><code>&lt;section&gt;</code></li>
+                <li><code>&lt;h1&gt;</code></li>
+                <li><code>&lt;p&gt;</code></li>
+                <li><code>&lt;ul&gt;</code></li>
+            </ul>
+        <p>Para la investigación anterior se usó la siguiente liga: <a href="https://edu.gcfglobal.org/es/curso-basico-de-html/elementos-de-bloque-en-linea-y-de-organizacion-html/1" target="_blank">Elementos de bloque, en línea y de organización HTML</a></p>
+    </section>
+
+    <section style="padding:20px">
+        <h2>Investiga los campos <code>&lt;input&gt;</code>,<code>&lt;label&gt;</code>, <code>&lt;output&gt;</code>, <code>&lt;progress&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;textarea&gt;</code>, 
+            las propiedades que pueden tener y pon un ejemplo de cada uno de estos. 
+            Para la etiqueta input, busca cómo se usa la propiedad type y pon 7 usos distintos de la misma. 
+            Todos estos campos deben estar dentro de un formulario.</h2>
+        <form oninput="suma.value = Number(a.value) + Number(b.value)">
+
+        <h3>Inputs y label</h3>
+        <p>La etiqueta <code>&lt;label &gt;</code> sirve para asociar un texto descriptivo a un campo de formulario.
+            Además, mejora la accesibilidad porque al hacer clic en el label, se activa el campo correspondiente.</p>
+        <p>Por otro lado, la etiqueta <code>&lt;input &gt;</code> se utiliza para que los usuarios puedan ingresar datos en un sitio web. 
+            Para esta etiqueta, usamos el atributo type, el cual indica el tipo de entrada que se espera del usuario, como texto o números.</p>
+        <p>Además de type, algunas otras propiedades que tienen los inputs son:</p>
+        <ul>
+            <li>name: el nombre del campo en el formulario</li>
+            <li>value: indica si hay algun valor por defecto</li>
+            <li>placeholder: es un texto de ayuda en el campo</li>
+            <li>required: indica si el campo es obligatorio</li>
+        </ul>
+        <strong>A continuación, se encuentran 7 tipos de inputs:</strong><br>
+        <label for="nombre">Texto:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+        <br><br>
+        <label for="correo">Email:</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com">
+        <br><br>
+        <label for="clave">Password:</label>
+        <input type="password" id="clave" name="clave">
+        <br><br>
+        <label for="edad">Number:</label>
+        <input type="number" id="edad" name="edad" min="0" max="120">
+        <br><br>
+        <label for="nac">Date:</label>
+        <input type="date" id="nac" name="nac">
+        <br><br>
+        <label>
+        <input type="checkbox" name="terminos">
+        Acepto términos
+        </label>
+        <br><br>
+        Género:
+        <label><input type="radio" name="genero" value="f"> F</label>
+        <label><input type="radio" name="genero" value="m"> M</label>
+        <br><br>
+
+
+
+        <h3>Output</h3>
+        <p>Esta etiqueta se utiliza mostrar resultados de operaciones o scripts dentro de un formulario.</p>
+        <label for="a">Número A:</label>
+        <input id="a" type="number" value="5">
+        +
+        <label for="b">Número B:</label>
+        <input id="b" type="number" value="3">
+        =
+        <output name="suma">8</output>
+        <br><br>
+
+
+
+        <h3>Progress</h3>
+        <p>Esta etiqueta se utiliza para mostrar el progreso de una tarea en curso.</p>
+        <label>Progreso:</label>
+        <progress value="60" max="100"></progress>
+        <br><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+
+
+        <h3>Select y option</h3>
+        <p>La etiqueta <code>&lt;select&gt;</code> se utiliza para crear un menú desplegable.</p>
+        <p>Por otro lado, la etiqueta <code>&lt;option&gt;</code> se utiliza para definir las opciones dentro de ese menú.</p>
+        <label for="carrera">Carrera:</label>
+        <select id="carrera" name="carrera">
+        <option value="icc">Ing. en Computación</option>
+        <option value="ia">Ing. en Inteligencia Artificial</option>
+        <option value="lcd">Lic. en Ciencia de Datos</option>
+        </select>
+        <br><br>
+
+
+        <h3>Textarea</h3>
+        <p>Por último, esta etiqueta se usa para texto de varias líneas, como comentarios o descripciones largas.</p>
+        <p>Algunos atributos comúnes de esta etiqueta son:</p>
+        <ul>
+            <li>rows y cols: definen su tamaño</li>
+            <li>maxlength: define la longitud máxima del texto</li>
+            <li>placeholder: es un texto de ayuda en el campo</li>
+        </ul>
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="40"
+                placeholder="Escribe aquí..."></textarea>
+        <br><br>
+    </form> 
+    </section>
+  </body>
+</html>
