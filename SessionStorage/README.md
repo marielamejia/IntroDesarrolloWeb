@@ -8,22 +8,43 @@ Al igual que localStorage, sessionStorage es una propiedad que accede al objeto 
 
 Algunas características claves son: 
 - Los datos se borran cuando la pestaña del navegador se cierra
-- sessionStorage mantiene un área de almacenamiento separada para cada origen, aplicando la política del mismo origen
+- sessionStorage mantiene un área de almacenamiento separada para cada origen, es decir, solo puede ser accedido desde páginas que compartan el mismo dominio, protocolo y puerto
 - Ofrece una capacidad de almacenamiento de alrededor de 5MB a 10MB por origen
 - La información solo está disponible en la pestaña específica donde fue creada
-- Los datos no se conservan entre sesiones de navegador ni en modo incógnito. 
+- Los datos no se conservan entre sesiones de navegador ni en modo incógnito
 
 ## ¿Qué propiedades tiene? 
 `sessionStorage.length` → número de elementos guardados.
+
 `sessionStorage.setItem(clave, valor)` → inserta/actualiza.
+
 `sessionStorage.getItem(clave)` → obtiene (o `null` si no existe).
+
 `sessionStorage.removeItem(clave)` → elimina esa clave.
+
 `sessionStorage.clear()` → elimina todos los elementos.
+
 `sessionStorage.key(indice)` → devuelve la clave en la posición `indice` (0…length-1).
 
 ## Estructura
+Como vimos anteriormente, sessionStorage funciona como un diccionario (usa clave-valor) en el que cada dato se guarda como un String. Esto significa que tanto las claves como los valores deben ser cadenas. Si se desea guardar información más compleja, como objetos o arreglos, se deben convertir a texto con `JSON.stringify()` y, al recuperarlos, volver a su formato original con `JSON.parse()`.
+
+Ejemplo:
+```js
+{
+  "usuario": "Mariela",
+  "tema": "oscuro",
+  "contadorVisitas": "3"
+}
+```
 
 ## Requerimientos
+Para utilizar sessionStorage de manera correcta, se deben cumplir los siguientes requerimientos: 
+- Ejecutarse en un navegador 
+- Respetar la política del mismo origen (cada dominio tiene su propio espacio de almacenamiento)
+- Guardar únicamente texto (Strings). Si se necesita guardar objetos, deben serializarse con JSON.`stringify()`
+- No almacenar información sensible, ya que los datos son accesibles mediante JavaScript desde el mismo origen.
+- No propaga eventos storage entre pestañas, a diferencia de localStorage.
 
 ## ¿Cuáles son las diferencias que existen respecto de localStorage? 
 <table>
