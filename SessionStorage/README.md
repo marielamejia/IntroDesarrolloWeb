@@ -79,7 +79,7 @@ Para utilizar sessionStorage de manera correcta, se deben cumplir los siguientes
     <tr>
       <td><b>Seguridad</b></td>
       <td>No apto para información sensible.</td>
-      <td>Tampoco seguro; guarda en texto plano.</td>
+      <td>Tampoco es seguro; guarda información en texto plano.</td>
     </tr>
     <tr>
       <td><b>Uso común</b></td>
