@@ -26,8 +26,6 @@ Algunas características claves son:
 ## Requerimientos
 
 ## ¿Cuáles son las diferencias que existen respecto de localStorage? 
-<h3>Diferencias entre <code>sessionStorage</code> y <code>localStorage</code></h3>
-
 <table>
   <thead>
     <tr>
@@ -53,7 +51,7 @@ Algunas características claves son:
       <td>Preferencias del usuario, carritos, configuraciones persistentes</td>
     </tr>
     <tr>
-      <td><b>Eventos <code>storage</code></b></td>
+      <td><b>Eventos storage</b></td>
       <td>No se comparte entre pestañas</td>
       <td>Sí se propaga a otras pestañas del mismo origen</td>
     </tr>
