@@ -47,7 +47,6 @@ Para utilizar sessionStorage de manera correcta, se deben cumplir los siguientes
 - No propaga eventos storage entre pestañas, a diferencia de localStorage.
 
 ## ¿Cuáles son las diferencias que existen respecto de localStorage? 
-<h3>Diferencias entre <code>sessionStorage</code> y <code>localStorage</code></h3>
 <table>
   <thead>
     <tr>
@@ -59,18 +58,18 @@ Para utilizar sessionStorage de manera correcta, se deben cumplir los siguientes
   <tbody>
     <tr>
       <td><b>Duración</b></td>
-      <td>Los datos se borran al <b>cerrar la pestaña o ventana</b>.</td>
-      <td>Los datos <b>permanecen</b> hasta que se eliminen manualmente.</td>
+      <td>Los datos se borran al cerrar la pestaña o ventana.</td>
+      <td>Los datos permanecen hasta que se eliminen manualmente.</td>
     </tr>
     <tr>
       <td><b>Ámbito</b></td>
-      <td><b>Aislado</b> por pestaña o ventana.</td>
+      <td>Aislado por pestaña o ventana.</td>
       <td>Compartido entre pestañas del mismo dominio.</td>
     </tr>
     <tr>
       <td><b>Estructura</b></td>
-      <td>Guarda pares <b>clave–valor</b> en formato texto (solo <b>strings</b>).</td>
-      <td>También usa <b>clave–valor</b> y admite solo <b>strings</b>.</td>
+      <td>Guarda pares clave–valor en formato texto (solo Strings).</td>
+      <td>También usa clave–valor y admite solo Strings.</td>
     </tr>
     <tr>
       <td><b>Persistencia</b></td>
