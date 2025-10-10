@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Llamada con fetch </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+          rel="stylesheet"
+          integrity="sha384sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+          crossorigin="anonymous">
+
+    <script>
+
+       function obtenerInfo() {
+        const URL = "https://fabianorduna.github.io/intro-al-desarrollo-web/Javascript/JSON/dia-muertos.json";
+
+        fetch(URL)
+          .then((response) => {
+            console.log("Respuesta recibida:", response);
+            return response.json();
+          })
+          .then((data) => {
+            console.log("Datos obtenidos:", data.elementos_clave);
+            document
+              .getElementById("cont-princ")
+              .classList.remove("d-none");
+              //AGREGAR CONTENIDO DE LA LLAMADA
+              document
+                .getElementById("elementos").innerHTML = JSON.stringify(data.elementos_clave);
+
+                
+            console.log("Título", data.titulo); 
+            document
+                .getElementById("cont-titulo")
+                .classList.remove("d-none"); 
+                //AGREGAMOS LLAMADA AL TITULO
+                document
+                .getElementById("titulo").innerHTML = JSON.stringify(data.titulo);
+
+
+            console.log("Descripción", data.descripcion); 
+            document
+                .getElementById("cont-descrp")
+                .classList.remove("d-none"); 
+                //AGREGAMOS LLAMADA A LA DESCRIPCIÓN
+                document
+                .getElementById("descripcion").innerHTML = JSON.stringify(data.descripcion);
+
+            
+          })
+          .catch((error) => {
+            console.log("Error:", error);
+          });
+        }
+    </script>
+  </head>
+
+
+  <body>
+    <h1 class="text-center my-5">Día de muertos</h1>
+    <div class="text-center my-5">
+        <button class="btn btn-primary mb-3 mt-3 ms-3" onclick="obtenerInfo()">Obtener información</button>
+    </div>
+
+    <div id="cont-titulo" class="d-none mx-5">
+        <!--Obtenemos el título-->
+        <h2>Título de la sección</h2>
+        <div id="titulo">
+        </div>
+    </div>
+
+
+    <div id="cont-descrp" class="d-none mx-5">
+        <!--Obtenemos la descripción-->
+        <h2>Descripción</h2>
+        <div id="descripcion">
+        </div>
+    </div>
+
+
+    <div id="cont-princ" class="d-none mx-5">
+        <!--Obtenemos los elementos clave-->
+        <h2>Elementos clave del día de muertos</h2>
+        <div id="elementos">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+            crossorigin="anonymous">
+    </script>
+
+ </body>
+</html>

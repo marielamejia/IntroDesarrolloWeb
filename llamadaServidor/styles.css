@@ -1,0 +1,11 @@
+#boton {
+    background-color: #279FF5; 
+    width: 30vw;
+    height: 10vh; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#boton:hover {
+    background-color: #1C6ED5; 
+}
