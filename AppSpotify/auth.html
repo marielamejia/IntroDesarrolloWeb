@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Autenticación con Spotify </title>
+  </head>
+
+  <body class="mx-5 my-4">
+      <h1 style="text-align: center;">Autenticación con Spotify</h1>  
+      <p style="text-align: center;">Ingresa tus credenciales para obtener tu token de acceso</p>
+      <form method="POST"
+            action="https://accounts.spotify.com/api/token"
+            enctype="application/x-www-form-urlencoded"
+      >
+          <input  hidden name="grant_type" value="client_credentials" />
+          <input name="client_id" placeholder="ingresa_tu_client_id" />
+          <input name="client_secret" placeholder="ingresa_tu_client_secret" />
+          <button class="btn my-3 " type="submit">Solicitar token</button>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+/*estilado para el body, queremos que el texto nos salga a la mitad de la pantalla */
+body {
+  background-color: #5eb298;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     
+  justify-content: center; 
+  height: 100vh;          
+  margin: 0;
+}
+
+.btn {
+    display: block;
+    margin: 20px auto 0 auto; 
+    background-color: #6e7aaa; 
+    font-weight: 600;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+}
+
+
+/*estilado para los inputs de autorizacion*/
+form input[type="text"],
+form input[name="client_id"],
+form input[name="client_secret"] {
+  width: 250px;
+  padding: 12px 16px;
+  margin: 10px; /* separación entre inputs */
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}

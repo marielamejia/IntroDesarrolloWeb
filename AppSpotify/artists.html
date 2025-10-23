@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artistas Spotify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--enlazamos nuestra clase de estilos-->
+    <link rel="stylesheet" href="styles.css">
+    <script src="obten-artista.js" defer></script> <!--defer hace que el script se cargue después del HTML-->
+  </head>
+
+  <body class="mx-5 my-4">
+    <h1 style="text-align: center;">Artistas de Spotify</h1>
+    <button class="btn my-5" onclick="obtenerArtistaFijo()">Obtener artista</button>
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+      <div class="card" id="cardArtista" style="width: 18rem; display: none;">
+        <img src="" class="card-img-top" alt="Taylor Swift" id="CoverImageTaylor">
+        <div class="card-body">
+        <h5 class="card-title" id="card-title">Card title</h5>
+        <p class="card-text" id="card-text">
+          <span class="text-bold"> Followers:</span>
+          <div id="Body"></div>
+        </p>
+        <a href="" class="btn btn-primary" id="LinkTaylor">Visita su perfil de Spotify</a>
+      </div>
+    </div>
+  </body>
+
+</html>
