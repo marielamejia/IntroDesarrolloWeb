@@ -1,14 +1,12 @@
 /*estilado para el body, queremos que el texto nos salga a la mitad de la pantalla */
 body {
   background-color: #5eb298;
-  display: flex;
-  flex-direction: column;
   align-items: center;     
-  justify-content: center; 
-  height: 100vh;          
+  justify-content: center;         
   margin: 0;
 }
 
+/*estilado para que los botones salgan morados como en el album*/
 .btn {
     display: block;
     margin: 20px auto 0 auto; 
@@ -19,6 +17,11 @@ body {
     border-radius: 30px;
 }
 
+
+
+/**************************************************/
+/*********** estilado para auth.html **************/
+/**************************************************/
 
 /*estilado para los inputs de autorizacion*/
 form input[type="text"],

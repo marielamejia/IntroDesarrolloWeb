@@ -4,6 +4,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--enlazamos nuestra clase de estilos-->
     <link rel="stylesheet" href="styles.css">
     <title>Autenticación con Spotify </title>
   </head>
@@ -11,10 +13,12 @@
   <body class="mx-5 my-4">
       <h1 style="text-align: center;">Autenticación con Spotify</h1>  
       <p style="text-align: center;">Ingresa tus credenciales para obtener tu token de acceso</p>
+      <!--formulario para obtener el token de acceso de Spotify for developers-->
       <form method="POST"
             action="https://accounts.spotify.com/api/token"
             enctype="application/x-www-form-urlencoded"
       >
+      <!--pedimos las credenciales del usuario para poder obtener su token-->
           <input  hidden name="grant_type" value="client_credentials" />
           <input name="client_id" placeholder="ingresa_tu_client_id" />
           <input name="client_secret" placeholder="ingresa_tu_client_secret" />
