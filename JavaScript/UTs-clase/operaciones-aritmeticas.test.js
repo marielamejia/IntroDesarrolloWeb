@@ -66,3 +66,12 @@ test("Debe sumar correctamente desde funcion operar", () => {
         expect(e.message).toBe("Operación no válida");
     }
 });
+
+///////////////////////////////////////////////////////////////
+//////////////////// PRUEBAS TAREA 15/11 //////////////////////
+//////////////////////////////////////////////////////////////
+
+//Prueba dividir usando toThrow()
+test('.toThrow() --> Dividir entre 0 lanza un error', () => {
+  expect(() => dividir(10, 0)).toThrow(); 
+});
