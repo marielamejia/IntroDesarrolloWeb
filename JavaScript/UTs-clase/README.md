@@ -1,4 +1,4 @@
-### Investigación de pruebas unitarias e implementación
+# Investigación de pruebas unitarias e implementación
 La carpeta contiene el material correspondiente a la tarea "Investigación de pruebas unitarias e implementación" que tiene como objetivo repasar los conocimientos del uso base de las pruebas unitarias vistos en clase.
 
 Sin embargo, existen otras maneras de cubrir dichas validaciones con la librería jest. Es por ello que está tarea también tiene como objetivo investigar sobre dichas formas y aprender a usarlas en algunos casos de uso. 
@@ -65,7 +65,6 @@ Ejemplo:
 
 Nótese que en este caso falla porque a pesar de ser el mismo nombre, falla por prototipo. 
 
-
 ## Evidencias de pruebas unitarias
 ### Añadir una prueba unitaria al archivo que completaron con las pruebas unitarias, pero ahora usen un .toThrow() para probar el caso de la división entre cero (no deben usar try catch) y una fotografía del test pasando
 En el archivo operaciones-arirmeticas.test.js se hizo el test con .toThrow() para la operación dividir usando el siguiente método: 
@@ -79,7 +78,21 @@ test('.toThrow() --> Dividir entre 0 lanza un error', () => {
 A continuación, se presenta la evidencia de que se pasó la prueba: 
 
 <p align="center">
-    <img src="JavaScript\UTs-clase\imagenesEvidencia1511Tarea\operacionesAritmeticasEvidencia1.png" width="500" alt="Evidencia operación dividir con .toThrow()">
+    <img src="JavaScript\UTs-clase\imagenes\operacionesAritmeticasEvidencia1.png" width="500" alt="Evidencia operación dividir con .toThrow()">
 </p>
 
 ### Otro archivo en el que prueben sus funciones varias (llamenlo funciones-varias.test.js) y una imagen que sustente que sus pruebas pasaron
+Como primer punto, se hicieron unas funciones en el archivo funciones-varias.js, entre ellas:
+
+- esNumeroPositivo
+- obtenerUsuario
+- obtenerLista
+- regresaNull
+- regresaUndefined   
+
+Estas funciones se hicieron con el objetivo de probar los métodos mencionados anteriormente.
+A continuación, se muestra la evidencia de las pruebas:
+
+<p align="center">
+    <img src="JavaScript\UTs-clase\imagenes\evidenciaFuncionesVarias2.png" width="500" alt="Evidencia operación dividir con .toThrow()">
+</p>
