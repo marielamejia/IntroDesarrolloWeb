@@ -78,7 +78,7 @@ test('.toThrow() --> Dividir entre 0 lanza un error', () => {
 A continuación, se presenta la evidencia de que se pasó la prueba: 
 
 <p align="center">
-    <img src="../imagenes/operacionesAritmeticasEvidencia1.png" width="500" alt="Evidencia operación dividir con .toThrow()">
+    <img src="imagenes/operacionesAritmeticasEvidencia1.png" width="500" alt="Evidencia operación dividir con .toThrow()">
 </p>
 
 ### Otro archivo en el que prueben sus funciones varias (llamenlo funciones-varias.test.js) y una imagen que sustente que sus pruebas pasaron
@@ -94,5 +94,5 @@ Estas funciones se hicieron con el objetivo de probar los métodos mencionados a
 A continuación, se muestra la evidencia de las pruebas:
 
 <p align="center">
-    <img src="../imagenes/evidenciaFuncionesVarias2.png" width="500" alt="Evidencia pruebas pasadas con funciones varias">
+    <img src="imagenes/evidenciaFuncionesVarias2.png" width="500" alt="Evidencia pruebas pasadas con funciones varias">
 </p>
