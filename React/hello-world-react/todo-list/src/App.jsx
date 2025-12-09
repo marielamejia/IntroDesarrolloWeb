@@ -1,7 +1,8 @@
 import Gallery from "./components/GalleryWithParameters.jsx"; 
+import TodoList from "./components/TodoList.jsx";
 
 function App(){
-    return <Gallery/>; 
+    return <TodoList/>; 
 };
 
 export default App; 
